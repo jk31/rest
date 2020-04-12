@@ -1,0 +1,9 @@
+.vscode
+
+Pipfile
+Pipfile.lock
+
+staticfiles
+db.sqlite3
+*.pyc
+*.env
