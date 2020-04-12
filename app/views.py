@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 
 def index(request):
-    number = 5
+    number = 3
     return HttpResponse(f"TEST={number}")
