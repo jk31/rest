@@ -4,6 +4,7 @@ from django.urls import path, include
 import app.views
 
 urlpatterns = [
-    path("", app.views.index, name="index"),
+    path("app/", include("app.urls")),
     path('admin/', admin.site.urls),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework"))
 ]

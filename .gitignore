@@ -3,6 +3,8 @@
 Pipfile
 Pipfile.lock
 
+requests.http
+
 staticfiles
 db.sqlite3
 *.pyc
