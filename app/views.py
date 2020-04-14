@@ -1,6 +1,5 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.decorators import action
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
@@ -8,6 +7,7 @@ from app.serializers import TaskSerializer
 from app.models import Task
 
 class Index(APIView):
+    """Example page"""
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
@@ -19,6 +19,7 @@ class Index(APIView):
         return Response(res)
 
 class TaskViewSet(viewsets.ModelViewSet):
+    """ViewSet for the Task model"""
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = (IsAuthenticated,)
