@@ -55,9 +55,19 @@ if os.environ.get("USERNAME") == "user":
         'django.contrib.staticfiles',
         "rest_framework",
         "rest_framework.authtoken",
+        "djoser",
         "user",
         "app"
     ]
+
+    DJOSER = {
+        'PASSWORD_RESET_CONFIRM_URL': 'auth/users/password/reset/confirm/{uid}/{token}',
+        'USERNAME_RESET_CONFIRM_URL': 'auth/users/username/reset/confirm/{uid}/{token}',
+        #"LOGIN_FIELD": "email",
+        'ACTIVATION_URL': 'auth/users/activate/{uid}/{token}',
+        'SEND_ACTIVATION_EMAIL': True,
+        'SEND_CONFIRMATION_EMAIL': True,
+    }
 
     REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
