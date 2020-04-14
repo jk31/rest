@@ -6,6 +6,7 @@ from rest_framework.authtoken.models import Token
 from user.serializers import CreateUserSerializer
 from django.contrib.auth.models import User
 
+
 class CreateUserViewSet(APIView):
     """View to create a new user"""
 
