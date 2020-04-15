@@ -11,7 +11,7 @@ from django.core.mail import send_mail
 
 class Index(APIView):
     """Example page"""
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         return Response("lel")
@@ -38,6 +38,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self, *args, **kwargs):
         return Task.objects.all().filter(owner=self.request.user)
+        #return Task.objects.all()
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
