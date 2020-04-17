@@ -6,8 +6,8 @@ from user import views
 
 
 urlpatterns = [
-    url(r"^auth/", include("djoser.urls")),
-    url(r'^auth/', include('djoser.urls.authtoken')),
-    url(r'^auth/users/activate/(?P<uid>[\w-]+)/(?P<token>[\w-]+)/$', views.UserActivationView.as_view()),
-    url(r'^auth/users/password/reset/confirm/(?P<uid>[\w-]+)/(?P<token>[\w-]+)/$', views.ResetPasswordConfirmView.as_view()),
+    url(r"^", include("djoser.urls")),
+    url(r'^', include('djoser.urls.authtoken')),
+    url(r'^users/activate/(?P<uid>[\w-]+)/(?P<token>[\w-]+)/$', views.UserActivationView.as_view()),
+    url(r'^users/password/reset/confirm/(?P<uid>[\w-]+)/(?P<token>[\w-]+)/$', views.ResetPasswordConfirmView.as_view()),
 ]
